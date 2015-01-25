@@ -1,5 +1,3 @@
-require 'spec_helper' 
-
 describe Braintree::Luhn do
   subject { Braintree::Luhn.new(49927398716) } 
 
@@ -8,6 +6,6 @@ describe Braintree::Luhn do
   end
 
   it "validates the card" do
-    expect(subject.valid?).to eq(true) 
+    expect(subject.valid?).to be true
   end
 end
