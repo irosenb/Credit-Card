@@ -2,7 +2,7 @@
 
 My implementation of the Braintree problem. 
 
-I've divided the program into a few parts. I have the Luhn 10 Algorithm class, the Account class, the Balance class, and the Action class. 
+I've divided the program into a few parts. I have the Luhn 10 Algorithm class, the Account class, and the CreditCard class
 
 ## Luhn 10 Algorithm 
 
