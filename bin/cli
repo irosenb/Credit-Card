@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+require "thor" 
+require "pstore"
+require_relative "../lib/braintree"
+
+module Braintree
+  class CLI < Thor
+    package_name "CardProcess"
+
+    desc "add NAME CARD_NUMBER LIMIT", "Creates a new credit card for a given name, card number, and limit"
+    def add(name, card_number, limit)
+      credit_card = CreditCard.new(card_number, limit.to_i)
+      account = Account.new(name, credit_card)
+
+      puts "#{name}: #{credit_card.valid ? credit_card.balance : 'error'}"
+    end
+
+    desc "charge NAME AMOUNT", "Increases the balance of the card associated with the provided name by the amount specified"
+    def charge(name, amount)
+      account = Account.retrieve(name)
+      account.charge(amount.to_i)
+
+      puts "#{name}: #{account.card.valid ? account.card.balance : 'error'}"
+    end
+
+    desc "credit NAME AMOUNT", "Decreases the balance of the card associated with the provided name by the amount specified"
+    def credit(name, amount)
+      account = Account.retrieve(name)       
+      account.credit(amount.to_i)
+
+      puts "#{name}: #{account.card.valid ? account.card.balance : 'error'}"
+    end
+  end  
+
+  CLI.start(ARGV)
+end
