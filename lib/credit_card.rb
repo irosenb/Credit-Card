@@ -8,7 +8,7 @@ module Braintree
       @number = card_number
       @limit = limit
       @balance = 0
-      @valid = Braintree::Luhn.new(@number).valid?
+      @valid = Luhn.new(@number).valid?
     end
 
     def balance=(value)

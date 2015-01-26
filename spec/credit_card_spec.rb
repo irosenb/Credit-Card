@@ -7,7 +7,6 @@ describe Braintree::CreditCard do
 
   describe "charge" do
     it "increases balance" do
-      puts subject.valid 
       subject.balance += 20
       expect(subject.balance).to eq(20) 
     end

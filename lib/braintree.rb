@@ -1,4 +1,4 @@
-require "braintree/version"
+require_relative "./braintree/version"
 require "require_all"
 
 require_all "lib"
