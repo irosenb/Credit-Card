@@ -1,10 +1,10 @@
-# Braintree
+# Credit Card
 
-My implementation of the Braintree problem. 
+My implementation of the Credit Card problem. 
 
 ## Usage
 
-`cd` into the `braintree` directory. Then run `ruby bin/cli -h`. This will show all the commands available to you:
+`cd` into the `irosenb` directory. Then run `ruby bin/cli -h`. This will show all the commands available to you:
 
 - `add NAME CARD_NUMBER LIMIT`: Creates a new credit card for a given name, card number, and limit
 - `charge NAME AMOUNT`: Increases the balance of the card associated with the provided name by the amount specified

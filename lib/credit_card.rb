@@ -1,4 +1,4 @@
-module Braintree
+module Isaac
   class CreditCard
     attr_accessor :balance
     attr_reader :number, :limit

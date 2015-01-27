@@ -1,4 +1,4 @@
-module Braintree
+module Isaac
   class Account
     attr_accessor :name, :card
 

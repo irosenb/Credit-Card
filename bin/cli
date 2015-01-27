@@ -4,7 +4,7 @@ require "thor"
 require "pstore"
 require_relative "../lib/braintree"
 
-module Braintree
+module Isaac
   class CLI < Thor
     package_name "CardProcess"
 

@@ -1,11 +1,11 @@
-describe Braintree::Account do
+describe Isaac::Account do
   subject do
-    credit_card = Braintree::CreditCard.new(5454545454545454, 2000)
-    Braintree::Account.new("Isaac", credit_card)
+    credit_card = Isaac::CreditCard.new(5454545454545454, 2000)
+    Isaac::Account.new("Isaac", credit_card)
   end 
 
   it "has a credit card" do
-    expect(subject.card).to be_a(Braintree::CreditCard)
+    expect(subject.card).to be_a(Isaac::CreditCard)
   end
 
   describe ".charge" do
@@ -39,7 +39,7 @@ describe Braintree::Account do
     context "when property changes" do
       it "saves change" do
         subject.charge(20)
-        account = Braintree::Account.retrieve(subject.name)
+        account = Isaac::Account.retrieve(subject.name)
         expect(account.card.balance).to eq(20)
       end
     end
@@ -48,7 +48,7 @@ describe Braintree::Account do
   describe ".retrieve" do
     it "retrieves object from pstore" do
       store = PStore.new("data.pstore")
-      expected = Braintree::Account.retrieve("Isaac")
+      expected = Isaac::Account.retrieve("Isaac")
       expect(subject.name).to eq(expected.name) 
     end
   end

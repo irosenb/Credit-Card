@@ -1,5 +1,5 @@
-describe Braintree::CreditCard do
-  subject { Braintree::CreditCard.new(5454545454545454, 2000) } 
+describe Isaac::CreditCard do
+  subject { Isaac::CreditCard.new(5454545454545454, 2000) } 
   
   it "should initialize" do
     expect(subject.number).to_not be_nil

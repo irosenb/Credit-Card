@@ -1,8 +1,8 @@
-require_relative "./braintree/version"
+require_relative "./isaac/version"
 require "require_all"
 
 require_all "lib"
 
-module Braintree
+module Isaac
   # Your code goes here...
 end

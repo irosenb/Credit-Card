@@ -1,5 +1,5 @@
-describe Braintree::Luhn do
-  subject { Braintree::Luhn.new(4124510136917425) } 
+describe Isaac::Luhn do
+  subject { Isaac::Luhn.new(4124510136917425) } 
 
   it "reverses the digits" do
     expect(subject.reverse_digits).to eq(subject.card_number.to_s.reverse)

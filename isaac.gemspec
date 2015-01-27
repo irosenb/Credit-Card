@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'braintree/version'
+require 'isaac/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "braintree"
-  spec.version       = Braintree::VERSION
+  spec.name          = "isaac"
+  spec.version       = Isaac::VERSION
   spec.authors       = ["Isaac Rosenberg"]
   spec.email         = ["irosenb7@gmail.com"]
   spec.summary       = %q{TODO: Write a short summary. Required.}

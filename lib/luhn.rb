@@ -1,4 +1,4 @@
-module Braintree
+module Isaac
   class Luhn
     attr_accessor :card_number
     

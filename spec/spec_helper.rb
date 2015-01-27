@@ -15,7 +15,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-require "braintree"
+require "isaac"
 require "pstore"
 
 RSpec.configure do |config|
