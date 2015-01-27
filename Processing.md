@@ -47,5 +47,3 @@ Tom: $500
 ```
  
 Implement your solution in any programming language you wish, but keep in mind we may ask you to explain or extend your code.  Please write tests and include them with your submission, along with a README that includes usage instructions, an overview of your design decisions, and why you picked the programming language you used for the solution.
- 
-*** Note: this information is confidential. It is prohibited to share, post online or otherwise publicize without Braintree's prior written consent. ***

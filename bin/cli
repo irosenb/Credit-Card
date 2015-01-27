@@ -16,10 +16,11 @@ module Braintree
       puts "#{name}: #{credit_card.valid ? credit_card.balance : 'error'}"
     end
 
-    desc "charge NAME AMOUNT", "Increases the balance of the card associated with the provided name by the amount specified"
+    desc "charge NAME 'AMOUNT'", "Increases the balance of the card associated with the provided name by the amount specified"
     def charge(name, amount)
       account = Account.retrieve(name)
-      account.charge(amount.to_i)
+      quantity = amount[1..-1]
+      account.charge(quantity.to_i)
 
       puts "#{name}: #{account.card.valid ? account.card.balance : 'error'}"
     end
