@@ -2,7 +2,7 @@
 
 My implementation of the [Credit Card problem](Processing.md).
 
-Originally did this problem for an job interview. They asked me to write "production-quality code", and so I did. Felt like putting on Github as a testament to my ability to code…
+Originally did this problem for a job interview. They asked me to write "production-quality code", and so I did. Felt like putting on Github as a testament to my ability to code…
 
 ## Usage
 
