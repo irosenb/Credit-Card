@@ -1,6 +1,8 @@
 # Credit Card
 
-My implementation of the Credit Card problem. 
+My implementation of the [Credit Card problem](Processing.md).
+
+Originally did this problem for an job interview. They asked me to write "production-quality code", and so I did. Felt like putting on Github as a testament to my ability to code…
 
 ## Usage
 
@@ -27,6 +29,8 @@ I divided the algorithm into 6 different methods. I wanted to keep the class as 
 ## Account
 
 The Account class integrates all the different classes into one centralized system. It also manages persisting and retrieving accounts from storage. After trying to keep the persistence code in the CLI file, I decided to move that code to the `Account` class, making the CLI file much easier to read. 
+
+I used Ruby's `PStore` to persist data. Using a database felt like too much for the scope of this problem, and I didn't want to reinvent the wheel with saving/reading from a file. Obviously, if this was going to be deployed on a server, for managing real money, I'd use a real database, and would make sure it was up to [PCI DSS](https://www.pcicomplianceguide.org) standards.
 
 ## CreditCard
 
